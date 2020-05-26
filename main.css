@@ -1,0 +1,17 @@
+/* ==== GENERAL STYLES ==== */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ==HEADER STYLES ==== */
+
+header {
+	background: url(assets/wedding-landing-cover.jpg) no-repeat center;
+	background-size: cover;
+	height: 30vh;
+}
+
+main {
+	background: url(assets/wedding-landing-background.png)
+}
