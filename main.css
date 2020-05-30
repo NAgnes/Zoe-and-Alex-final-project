@@ -4,14 +4,380 @@
     box-sizing: border-box;
 }
 
-/* ==HEADER STYLES ==== */
 
-header {
-	background: url(assets/wedding-landing-cover.jpg) no-repeat center;
-	background-size: cover;
-	height: 30vh;
+/* ==Helping colors ==== */
+.black-box {
+	background-color: aqua;
 }
 
+
+
+/* ==BODY STYLES ==== */
+body {
+	width: 100%;
+	height: 100%;
+	color: #444349;
+	line-height: 1.5rem;
+	background: url(assets/wedding-landing-background.png);
+}
+
+
+/* ==HEADER STYLES ==== */
+
+.cover {
+	display: table;
+	background: url(assets/wedding-landing-cover.jpg) no-repeat 70% center/cover;
+	height: 100vh;
+	width: 100vw;
+	text-align: center;
+}
+
+.wrapper {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.black-box {
+	background-color: hsla(100,0%,0%,.5);
+	border-radius: 2%;
+	width: 100%;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+.tagline, .date {
+	font-family: 'libre baskerville', serif;
+	color: white;
+	font-size: 1rem;
+	padding: 1rem;
+	letter-spacing: .2rem;
+	white-space: nowrap;
+}
+
+.headline {
+	font-family: Great Vibes, arial;
+	color: #d2ba87;
+	font-size: 2rem;
+	padding: 1rem;
+	letter-spacing: .2rem;
+}
+
+.tagline::after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 11rem;
+  margin: .7rem auto;
+}
+
+.date::before, .date::after {
+	content: "";
+	display: inline-block;
+	background-color: white;
+	width: 1.5rem;
+	height: 1px;
+	margin: .3rem .3rem;
+	vertical-align: middle;
+}
+
+/* ==HEADER STYLES-MEDIA QUERY ==== */
+
+	@media (min-width: 768px) {
+		.cover {
+			background: url(assets/wedding-landing-cover.jpg) no-repeat center/cover;
+			}
+		
+		.tagline {
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			white-space: pre-wrap;
+			line-height: 2.2rem;
+			}
+		
+		.headline {
+			font-size: 3rem;
+		}
+		
+		.black-box {
+			width: 50%;			
+		}
+		
+		.cover {
+			width: 100%;
+		}
+	}
+
+
+/* ==MAIN STYLES ==== */
+
 main {
-	background: url(assets/wedding-landing-background.png)
+	text-align: center;
+}
+
+/* =="Locations styles" ==== */
+.location {
+	width: 100%;
+}
+
+.locations h1 {
+	font-family: Great Vibes, arial;
+	font-size: 3rem;
+	margin: 1.2rem;
+	font-weight: bold;
+	letter-spacing: .1rem
+}
+
+.ceremony h2, .photos h2, .party h2 {
+	font-family: 'libre baskerville', serif;
+	font-size: 1.25rem;
+	font-weight: 900;
+	letter-spacing: .12rem;
+	padding-bottom: 2rem;
+}
+
+img {
+	width: 15%;
+	height: 15%;
+}
+
+.details {
+	font-family: Muli, 'times new roman';
+	font-size: 1rem;
+	font-weight: bold;
+	padding-top: 1.1rem;
+	line-height: 1.5rem;
+}
+
+.details::after {
+	display: block;
+  content: "";
+  background-color: #444349;
+  height: 3px;
+  width: 6rem;
+  margin: 1.3rem auto;
+}
+
+/* =="Locations styles-Media query" ==== */
+
+@media (min-width: 768px) {
+	.ceremony, .photos, .party {
+		width: 33.3%;
+		float: left;
+	}
+	
+	.program {
+    clear: both;
+	}
+	
+	.details::after {
+  height: 0;
+}
+	
+}
+
+
+/* =="Program" styles ==== */
+
+.program {
+	background-color: hsla(100,0%,0%,.6);
+	color: #d2ba87;
+	font-family: Muli, 'times new roman';
+	font-weight: bolder;
+	width: 100vw;
+	text-align: left;
+	margin: 1.5rem 0;
+  padding: .5rem 1rem;
+	width: 95%;
+}
+
+.program h1 {
+	font-family: Great Vibes, arial;
+	font-size: 3rem;
+	margin: 1.2rem;;
+	font-weight: bold;
+	letter-spacing: .1rem;
+	text-align: center;
+}
+
+.program p {
+	font-style: italic;
+	padding: 1rem;
+}
+
+.program ul {
+	list-style-type: none;
+	letter-spacing: .15rem;
+	line-height: 1.5rem;
+}
+
+/* =="Program" styles - Media query==== */
+	@media (min-width: 768px) {
+		.program {
+			width: 100%;
+		}
+		
+		.program-wrapper {
+			width: 50%;
+			margin: 0 auto;
+		}
+		
+}
+
+/* =="Gifts" styles ==== */
+
+.gifts h1 {
+	font-family: Great Vibes, arial;
+	font-size: 3rem;
+	margin: 1.2rem;
+	font-weight: bold;
+	letter-spacing: .1rem
+}
+
+.gifts p {
+	font-family: 'libre baskerville', serif;
+	padding: 1.1rem;
+}
+
+
+
+/* =="Questions and answer" styles ==== */
+.questions-answer {
+	background-color: hsla(100,0%,0%,.6);
+	color: #d2ba87;
+	font-family: Muli, 'times new roman';
+	font-weight: bolder;
+	text-align: left;
+	margin: 1.5rem 0;
+  padding: .5rem 1rem;
+	width: 95%;
+	line-height: 1.5rem;
+}
+
+.questions-answer h1 {
+	font-family: Great Vibes, arial;
+	font-size: 3rem;
+	margin: 1.2rem;;
+	font-weight: bold;
+	letter-spacing: .1rem;
+	text-align: center;
+	line-height: 3rem;
+}
+
+.questions-answer h2 {
+	font-family: 'libre baskerville', serif;
+	font-size: 1.25rem;
+	font-weight: 900;
+	letter-spacing: .12rem;
+	padding-bottom: 1.2rem;
+	text-align: center;
+}
+
+.question {
+	font-weight: 900;
+	margin-bottom: .2rem;
+	margin-top: .5rem;
+}
+
+.answer {
+	font-weight: 500;
+}
+
+.line-after::after {
+	display: block;
+  content: "";
+  background-color: #d2ba87;
+  height: 3px;
+  width: 11rem;
+  margin: 1.6rem auto;
+}
+
+a {
+	color: #bd806e;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #eda087;
+	transition: color .15s ease-in-out;
+}
+
+/* =="Questions and answer" styles - MEDIA QUERY ==== */
+
+	@media (min-width: 768px) {
+		
+		.travel, .food, .other {
+			margin-top: 1rem;
+			margin-left: .2rem;
+			display: inline-block;
+    	width: 30%;
+			vertical-align: top;
+		}
+		
+		.questions-answer-wrapper::after {
+			display: none;
+		}
+	
+		.line-after::after {
+  		height: 0;
+		}
+		
+		.questions-answer h2 {
+			text-align: left;
+		}
+		
+	}
+
+/* =="Contact" styles ==== */
+.contact {
+	font-family: 'libre baskerville', serif;
+	padding: 1.1rem;
+	font-weight: 600;
+	line-height: 1.4rem;
+	}
+
+.contact h1 {
+	font-family: Great Vibes, arial;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+	font-weight: bold;
+	letter-spacing: .1rem
+}
+
+.phone, .email {
+	margin-top: 1rem;
+}
+
+
+/* =="Footer" styles ==== */
+
+footer {
+	background-color: #606060;
+	color: white;
+	text-align: center;
+	font-family: Muli, 'times new roman';
+	font-size: .8rem;
+	width: 100vw;
+	height: 10vh;
+	display: flex;
+}
+
+.footer-wrapper {
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 1rem;
+}
+
+footer p {
+	line-height: 1.5rem;
+}
+
+/* =="Footer" styles -MEDIA QUERY ==== */
+
+@media (min-width: 768px) {
+
+  footer {
+    min-height: 7vh;
+  }
+	
 }
